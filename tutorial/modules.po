@@ -3,22 +3,24 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-21 18:09+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-05-19 16:00+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: ../Doc/tutorial/modules.rst:5
 msgid "Modules"
-msgstr ""
+msgstr "Moduli"
 
 #: ../Doc/tutorial/modules.rst:7
 msgid ""
@@ -31,6 +33,13 @@ msgid ""
 "You may also want to use a handy function that you've written in several "
 "programs without copying its definition into each program."
 msgstr ""
+"Se esci  e rientri dall'interprete Python, le definizioni fatte (funzioni e "
+"variabili) vengono perse. Se, quindi, vuoi scrivere un programma più lungo, "
+"dovresti usare un editor di testo e lanciare l'interprete con il file come "
+"input. Questo è conosciuto come creare uno *script*. Quando il tuo programma "
+"diventa più lungo, potresti avere bisogno di dividerlo in più file per una "
+"manutenzione più semplice. Potresti anche voler usare una funzione utile "
+"scritta in più programmi senza copiare la sua definizione in ognuno di essi."
 
 #: ../Doc/tutorial/modules.rst:16
 msgid ""
@@ -50,12 +59,20 @@ msgid ""
 "to create a file called :file:`fibo.py` in the current directory with the "
 "following contents::"
 msgstr ""
+"Un modulo è un file contenente definizioni e statement Python. Il nome del "
+"file è il nome del modulo con il suffisso  :file:`.py`.  Dentro ad un "
+"modulo, il nome di esso (come stringa) è disponibile come valore della "
+"variabile globale ``__name__``. Ad esempio, usa il tuo editor di testo "
+"preferito per creare un file :file:`fibo.py` nella cartella corrente con il "
+"contenuto seguente::"
 
 #: ../Doc/tutorial/modules.rst:45
 msgid ""
 "Now enter the Python interpreter and import this module with the following "
 "command::"
 msgstr ""
+"Ora entra nell'interprete Python e importa questo modulo con il seguente "
+"comando::"
 
 #: ../Doc/tutorial/modules.rst:50
 msgid ""
@@ -68,10 +85,11 @@ msgstr ""
 msgid ""
 "If you intend to use a function often you can assign it to a local name::"
 msgstr ""
+"Se intendi usare spesso una funzione puoi assegnarla ad un nome locale::"
 
 #: ../Doc/tutorial/modules.rst:71
 msgid "More on Modules"
-msgstr ""
+msgstr "Altro sui moduli"
 
 #: ../Doc/tutorial/modules.rst:73
 msgid ""
@@ -80,6 +98,11 @@ msgid ""
 "only the *first* time the module name is encountered in an import statement. "
 "[#]_ (They are also run if the file is executed as a script.)"
 msgstr ""
+"Un modulo può contenere statement eseguibili così come definizioni di "
+"funzioni. Questi statement servono per inizializzare il modulo. Vengono "
+"eseguiti solo la *prima* volta che il nome del modulo viene incontrato in "
+"uno statement di import. [#]_ (Vengono eseguiti anche se il file viene "
+"eseguito come script.)"
 
 #: ../Doc/tutorial/modules.rst:78
 msgid ""
@@ -90,6 +113,13 @@ msgid ""
 "know what you are doing you can touch a module's global variables with the "
 "same notation used to refer to its functions, ``modname.itemname``."
 msgstr ""
+"Ogni modulo possiede la sua tabella dei simboli privata, usata come tabella "
+"dei simboli globali da tutte le funzioni definite nel modulo. Per questo "
+"motivo quindi, l'autore di un modulo può utilizzare le variabili globali nel "
+"modulo senza preoccuparsi dei conflitti accidentali con le variabili globali "
+"definite dall'utente. D'altro canto, se sai cosa stai facendo, puoi usare le "
+"variabili globali del modulo con la stessa notazinoe usata per riferirsi "
+"alle sue funzioni, ``modname.itemname``."
 
 #: ../Doc/tutorial/modules.rst:85
 msgid ""
@@ -98,6 +128,10 @@ msgid ""
 "for that matter).  The imported module names are placed in the importing "
 "module's global symbol table."
 msgstr ""
+"I moduli possono importare altri moduli. è frequente ma non necessario "
+"mettere tutti gli statement :keyword:`import` all'inizio del moduli (o "
+"script). I nomi dei moduli importati sono situati nella tabella dei simboli "
+"globale del modulo importato."
 
 #: ../Doc/tutorial/modules.rst:90
 msgid ""
@@ -105,6 +139,9 @@ msgid ""
 "from a module directly into the importing module's symbol table.  For "
 "example::"
 msgstr ""
+"Esiste una variante dello statement :keyword:`import` che importa nomi da un "
+"modulo direttamente nella tabella dei simboli del modulo che importa. Ad "
+"esempio::"
 
 #: ../Doc/tutorial/modules.rst:97
 msgid ""
@@ -115,6 +152,8 @@ msgstr ""
 #: ../Doc/tutorial/modules.rst:100
 msgid "There is even a variant to import all names that a module defines::"
 msgstr ""
+"Esiste anche un'alternativa all'importazione di tutti i nomi che un modulo "
+"definisce::"
 
 #: ../Doc/tutorial/modules.rst:106
 msgid ""
@@ -123,6 +162,11 @@ msgid ""
 "an unknown set of names into the interpreter, possibly hiding some things "
 "you have already defined."
 msgstr ""
+"Questo importa tutti i nomi eccetto quelli che iniziano con un underscore "
+"(``_``). Nella maggior parte dei casi i programmatori Python non usano "
+"questa agevolazione, dato che introduce un set sconosciuto di nomi "
+"nell'interprete, con la possibilità di nascondere alcune cose che hanno già "
+"definito."
 
 #: ../Doc/tutorial/modules.rst:111
 msgid ""
@@ -130,12 +174,18 @@ msgid ""
 "package is frowned upon, since it often causes poorly readable code. "
 "However, it is okay to use it to save typing in interactive sessions."
 msgstr ""
+"Da notare che in generale la pratica di importare ``*`` da un modulo o un "
+"package è scoraggiato, dato che crea spesso codice poco leggibile. Comunque, "
+"è ammesso il suo utilizzo per risparmiare digitazioni nelle sessioni "
+"interattive."
 
 #: ../Doc/tutorial/modules.rst:115
 msgid ""
 "If the module name is followed by :keyword:`!as`, then the name following :"
 "keyword:`!as` is bound directly to the imported module."
 msgstr ""
+"Se il nome del modulo è seguito da :keyword:`!as`, allora il nome che segue :"
+"keyword:`!as` è legato direttamente al modulo importato."
 
 #: ../Doc/tutorial/modules.rst:124
 msgid ""
@@ -147,6 +197,8 @@ msgstr ""
 msgid ""
 "It can also be used when utilising :keyword:`from` with similar effects::"
 msgstr ""
+"Può essere anche usato quando viene usato :keyword:`from` con effetti "
+"simili::"
 
 #: ../Doc/tutorial/modules.rst:136
 msgid ""
@@ -156,14 +208,19 @@ msgid ""
 "use :func:`importlib.reload`, e.g. ``import importlib; importlib."
 "reload(modulename)``."
 msgstr ""
+"Per ragioni di efficienza, ogni modulo viene importato solo una volta per "
+"sessione dell'interprete. Per questo motivo, se cambi i tuoi moduli, devi "
+"riavviare l'interprete -- o, se vuoi testare un solo modulo "
+"interattivamente, usa :func:`importlib.reload`, ad esempio ``import "
+"importlib; importlib.reload(modulename)``."
 
 #: ../Doc/tutorial/modules.rst:146
 msgid "Executing modules as scripts"
-msgstr ""
+msgstr "Eseguire moduli come script"
 
 #: ../Doc/tutorial/modules.rst:148
 msgid "When you run a Python module with ::"
-msgstr ""
+msgstr "Quando esegui un modulo Python con ::"
 
 #: ../Doc/tutorial/modules.rst:152
 msgid ""
@@ -171,6 +228,9 @@ msgid ""
 "with the ``__name__`` set to ``\"__main__\"``.  That means that by adding "
 "this code at the end of your module::"
 msgstr ""
+"il codice nel modulo verrà eseguito, come se lo avessi importato, ma con "
+"``__name__`` impostato a ``\"__main__\"``. Questo significa che aggiungendo "
+"questo codice alla fine del modulo::"
 
 #: ../Doc/tutorial/modules.rst:160
 msgid ""
@@ -178,10 +238,13 @@ msgid ""
 "because the code that parses the command line only runs if the module is "
 "executed as the \"main\" file:"
 msgstr ""
+"puoi rendere il file utilizzabile come script o come modulo importabile, "
+"dato che il codice che effettua il parsing della linea di comando viene "
+"eseguito solo se il modulo è eseguito come file \"main\":"
 
 #: ../Doc/tutorial/modules.rst:169
 msgid "If the module is imported, the code is not run::"
-msgstr ""
+msgstr "Se il modulo viene importato, il codice non viene eseguito::"
 
 #: ../Doc/tutorial/modules.rst:174
 msgid ""
@@ -189,6 +252,9 @@ msgid ""
 "module, or for testing purposes (running the module as a script executes a "
 "test suite)."
 msgstr ""
+"Viene spesso usato sia per fornire una conveniente interfaccia utente al "
+"modulo, sia per motivi di test (lanciando il modulo come script, esegue una "
+"suite di test)."
 
 #: ../Doc/tutorial/modules.rst:181
 msgid "The Module Search Path"
@@ -201,22 +267,31 @@ msgid ""
 "file named :file:`spam.py` in a list of directories given by the variable :"
 "data:`sys.path`.  :data:`sys.path` is initialized from these locations:"
 msgstr ""
+"Quando un modulo chiamato :mod:`spam` viene importato, l'interprete ricerca "
+"per primo un moduli built-in con quel nome. Se non viene trovato, ricerca "
+"quindi un file di nome :file:`spam.py` in una lista di cartelle data dalla "
+"variabile :data:`sys.path`.  :data:`sys.path` è inizializzata da queste "
+"posizioni:"
 
 #: ../Doc/tutorial/modules.rst:190
 msgid ""
 "The directory containing the input script (or the current directory when no "
 "file is specified)."
 msgstr ""
+"La cartella contenente lo script di input (o quella corrente quando non "
+"viene specificato un file)."
 
 #: ../Doc/tutorial/modules.rst:192
 msgid ""
 ":envvar:`PYTHONPATH` (a list of directory names, with the same syntax as the "
 "shell variable :envvar:`PATH`)."
 msgstr ""
+":envvar:`PYTHONPATH` (una lista di nomi di cartelle, con la stessa sintassi "
+"della variabile di shell :envvar:`PATH`)."
 
 #: ../Doc/tutorial/modules.rst:194
 msgid "The installation-dependent default."
-msgstr ""
+msgstr "Il default dipendente dall'installazione."
 
 #: ../Doc/tutorial/modules.rst:197
 msgid ""
@@ -224,6 +299,10 @@ msgid ""
 "script is calculated after the symlink is followed. In other words the "
 "directory containing the symlink is **not** added to the module search path."
 msgstr ""
+"Sui file system che supportano i link simbolici, la cartella contenente lo "
+"script di input è calcolata dopo che il link simbolico viene seguito. In "
+"altre parole la cartella contenente il link simbolico **non** viene aggiunto "
+"al path di ricerca del modulo."
 
 #: ../Doc/tutorial/modules.rst:201
 msgid ""
@@ -234,10 +313,17 @@ msgid ""
 "library directory. This is an error unless the replacement is intended.  See "
 "section :ref:`tut-standardmodules` for more information."
 msgstr ""
+"Dopo l'inizializzazione, i programmi Python possono modificare :data:`sys."
+"path`. La cartella contenente lo script lanciato è posizionata all'inizio "
+"del percorso di ricerca, davanti al percorso della libreria standard. Questo "
+"significa che gli script nella cartella saranno caricati al posto dei moduli "
+"con gli stessi nomi nella cartella della libreria. Questo è un errore a meno "
+"che la sostituzione sia voluta. Vedi la sezione :ref:`tut-standardmodules` "
+"per maggiori informazioni."
 
 #: ../Doc/tutorial/modules.rst:212
 msgid "\"Compiled\" Python files"
-msgstr ""
+msgstr "File Python \"compilati\""
 
 #: ../Doc/tutorial/modules.rst:214
 msgid ""
@@ -249,6 +335,14 @@ msgid ""
 "spam.cpython-33.pyc``.  This naming convention allows compiled modules from "
 "different releases and different versions of Python to coexist."
 msgstr ""
+"Per velocizzare il caricamento dei moduli, Python tiene in cache la versione "
+"compilata di ogni modulo nella cartella ``__pycache__`` sotto il nome :file:"
+"`module.{version}.pyc`, dove la versione codifica il formato del file "
+"compilato; contiene generalmente il numero della versione Python. Ad "
+"esempio, nella release 3.3 di CPython la versione compilata di spam.py "
+"verrebbe tenuta in cache come ``__pycache__/spam.cpython-33.pyc``. Questa "
+"naming convention permette la coesistenza di moduli compilati da release e "
+"versioni differenti di Python."
 
 #: ../Doc/tutorial/modules.rst:222
 msgid ""
@@ -258,6 +352,11 @@ msgid ""
 "independent, so the same library can be shared among systems with different "
 "architectures."
 msgstr ""
+"Python confronta la data di modifica del sorgente con quella della versione "
+"compilata per verificare se è obsoleta e necessita di una seconda "
+"compilazione. Questo è un processo completamente automatico. Inoltre, i "
+"moduli compilati sono indipendenti dalla piattaforma, quindi la stessa "
+"libreria può essere condivisa tra più sistemi con architetture differenti."
 
 #: ../Doc/tutorial/modules.rst:227
 msgid ""
@@ -268,10 +367,16 @@ msgid ""
 "distribution, the compiled module must be in the source directory, and there "
 "must not be a source module."
 msgstr ""
+"Python non controlla la cache in due casi. Primo, ricompila sempre e non "
+"memorizza il risultato per il modulo caricato direttamente da linea di "
+"comando. Secondo, non controlla la cache se non esiste un modulo sorgente. "
+"Per il supporto a distribuzioni non sorgente (solo compilate), il modulo "
+"compilato deve trovarsi nella cartella sorgente e non deve esserci un modulo "
+"sorgente."
 
 #: ../Doc/tutorial/modules.rst:234
 msgid "Some tips for experts:"
-msgstr ""
+msgstr "Alcuni consigli per esperti:"
 
 #: ../Doc/tutorial/modules.rst:236
 msgid ""
@@ -283,6 +388,14 @@ msgid ""
 "have an ``opt-`` tag and are usually smaller.  Future releases may change "
 "the effects of optimization."
 msgstr ""
+"Puoi usare le opzioni :option:`-O` o :option:`-OO` sul comando Python per "
+"ridurre la dimensione del modulo compilato. Il flag ``-O`` rimuove gli "
+"statement di assert, ``-OO`` rimuove sia gli statement di assert, sia le "
+"stringhe __doc__. Dato che alcuni programmi possono basarsi sulla loro "
+"disponibilità, dovresti usare questa opzione solo se sai quello che stai "
+"facendo. I moduli \"ottimizzati\" hanno un tag ``opt-`` e sono solitamente "
+"più piccoli. Le release future potrebbero cambiare gli effetti "
+"dell'ottimizzazione."
 
 #: ../Doc/tutorial/modules.rst:244
 msgid ""
@@ -290,22 +403,29 @@ msgid ""
 "when it is read from a ``.py`` file; the only thing that's faster about ``."
 "pyc`` files is the speed with which they are loaded."
 msgstr ""
+"Un programma non viene eseguito più velocemente da un file ``.pyc`` rispetto "
+"ad un file ``.py``; l'unica cosa più veloce sui file ``.pyc`` è il loro "
+"caricamento."
 
 #: ../Doc/tutorial/modules.rst:248
 msgid ""
 "The module :mod:`compileall` can create .pyc files for all modules in a "
 "directory."
 msgstr ""
+"Il modulo :mod:`compileall` può creare file .pyc per tutti i moduli nella "
+"cartella."
 
 #: ../Doc/tutorial/modules.rst:251
 msgid ""
 "There is more detail on this process, including a flow chart of the "
 "decisions, in :pep:`3147`."
 msgstr ""
+"Esistono più dettagli su questo processo, compreso un diagramma di flusso "
+"delle decisioni, in :pep:`3147`."
 
 #: ../Doc/tutorial/modules.rst:258
 msgid "Standard Modules"
-msgstr ""
+msgstr "Moduli standard"
 
 #: ../Doc/tutorial/modules.rst:262
 msgid ""
@@ -321,12 +441,26 @@ msgid ""
 "into every Python interpreter.  The variables ``sys.ps1`` and ``sys.ps2`` "
 "define the strings used as primary and secondary prompts::"
 msgstr ""
+"Python è fornito di un libreria di moduli standard, descritta in un "
+"documento separato, la Python Library Reference (da qui in poi \"Library "
+"Reference\"). Alcuni moduli sono integrati nell'interprete; questi "
+"permettono l'accesso alle operazioni che non sono parte del linguaggio ma "
+"sono comunque built-in, sia per efficienza che per permettere l'accesso alle "
+"primitive del sistema operativo, come le chiamate di sistema. L'insieme di "
+"questi moduli è un'opzione di configurazione che dipende anche dalla "
+"piattaforma sottostante. Ad esempio, il modulo :mod:`winreg` è disponibile "
+"solo sui sistemi WIndows. Un particolare modulo merita particolare "
+"attenzione: :mod:`sys`, integrato in ogni interprete Python. Le variabili "
+"``sys.ps1`` e ``sys.ps2`` definiscono le stringhe usate come prompt primario "
+"e secondario::"
 
 #: ../Doc/tutorial/modules.rst:285
 msgid ""
 "These two variables are only defined if the interpreter is in interactive "
 "mode."
 msgstr ""
+"Queste due variabili sono definite solo se l'interprete è in modalità "
+"interattiva."
 
 #: ../Doc/tutorial/modules.rst:287
 msgid ""
@@ -336,26 +470,36 @@ msgid ""
 "default if :envvar:`PYTHONPATH` is not set.  You can modify it using "
 "standard list operations::"
 msgstr ""
+"La variabile ``sys.path`` è una lista di stringhe che determina il percorso "
+"di ricerca dell'interprete per i moduli. Questo viene inizializzato al "
+"percorso di default preso dalla variabile d'ambiente :envvar:`PYTHONPATH`, o "
+"da un default built-in se :envvar:`PYTHONPATH` non è impostata. Pui "
+"modificarla usando le operazioni standard sulle liste::"
 
 #: ../Doc/tutorial/modules.rst:300
 msgid "The :func:`dir` Function"
-msgstr ""
+msgstr "La Funzione :func:`dir`"
 
 #: ../Doc/tutorial/modules.rst:302
 msgid ""
 "The built-in function :func:`dir` is used to find out which names a module "
 "defines.  It returns a sorted list of strings::"
 msgstr ""
+"La funzione built-in :func:`dir` è usata per sapere quali nomi sono definiti "
+"da un modulo. Restituisce una lista ordinata di stringhe::"
 
 #: ../Doc/tutorial/modules.rst:327
 msgid ""
 "Without arguments, :func:`dir` lists the names you have defined currently::"
 msgstr ""
+"Senza argomenti, :func:`dir` elenca i nomi che hai definito al momento::"
 
 #: ../Doc/tutorial/modules.rst:335
 msgid ""
 "Note that it lists all types of names: variables, modules, functions, etc."
 msgstr ""
+"Da notare che elenca tutti i tipi di nome: variabili, moduli, funzioni, "
+"ecc..."
 
 #: ../Doc/tutorial/modules.rst:339
 msgid ""
@@ -363,10 +507,12 @@ msgid ""
 "you want a list of those, they are defined in the standard module :mod:"
 "`builtins`::"
 msgstr ""
+":func:`dir` non elenca i nomi delle funzioni e variabili built-in. Se vuoi "
+"una lista di essi, sono definiti nel modulo standard :mod:`builtins`::"
 
 #: ../Doc/tutorial/modules.rst:378
 msgid "Packages"
-msgstr ""
+msgstr "Package"
 
 #: ../Doc/tutorial/modules.rst:380
 msgid ""
